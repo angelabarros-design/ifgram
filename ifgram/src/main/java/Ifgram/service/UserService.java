@@ -5,17 +5,17 @@ import Ifgram.dto.UserResponse;
 import Ifgram.Model.User;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import Ifgram.repository.UserRepository;
 
 import java.util.Optional;
 
 @Service
-class userService {
+public class UserService {
 
     private final UserRepository repository;
 
     // injeção de dependêcia pelo construtor
-    public userService(UserRepository repository) {
+    public UserService(UserRepository repository) {
         this.repository = repository;
     }
 
